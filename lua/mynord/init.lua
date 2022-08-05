@@ -3,20 +3,20 @@
 -- Author:                  Ryan Mehri
 -- Website:                 https://github.com/hanapedia/mynord.nvim
 
-local config = require("onenord.config")
-local util = require("onenord.util")
+local config = require("mynord.config")
+local util = require("mynord.util")
 
-local onenord = {}
+local mynord = {}
 
-function onenord.setup(options)
+function mynord.setup(options)
   config.set_options(options)
-  onenord.load(true)
+  mynord.load(true)
 end
 
-function onenord.load(exec_autocmd)
-  local colors = require("onenord.colors").load()
+function mynord.load(exec_autocmd)
+  local colors = require("mynord.colors").load()
 
   util.load(colors, exec_autocmd)
 end
 
-return onenord
+return mynord
