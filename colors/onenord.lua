@@ -8,6 +8,6 @@ if vim.g.onenord_debug == true then
   package.loaded["onenord.theme"] = nil
 end
 
-local onenord = require("onenord")
+local mynord = require("onenord")
 
-onenord.load(false)
+mynord.load(false)
