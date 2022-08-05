@@ -356,7 +356,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.purple, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.yellow},
+      TSKeywordOperator = { fg = colors.light_purple},
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.purple },
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -368,7 +368,7 @@ function theme.highlights(colors, config)
       -- Numeric literals that don't fit into other categories.
       TSNumber = { fg = colors.orange },
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.yellow},
+      TSOperator = { fg = colors.light_purple},
       -- Parameters of a function.
       TSParameter = { fg = colors.red },
       -- References to parameters of a function.
