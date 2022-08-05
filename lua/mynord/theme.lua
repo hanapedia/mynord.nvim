@@ -354,7 +354,7 @@ function theme.highlights(colors, config)
       -- Keywords that don't fit into other categories.
       TSKeyword = { fg = colors.purple, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.pink, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.red, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
       TSKeywordOperator = { fg = colors.red},
       -- Keywords like `return` and `yield`.
@@ -368,7 +368,7 @@ function theme.highlights(colors, config)
       -- Numeric literals that don't fit into other categories.
       TSNumber = { fg = colors.light_green},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.red},
+      TSOperator = { fg = colors.yellow},
       -- Parameters of a function.
       TSParameter = { fg = colors.red },
       -- References to parameters of a function.
@@ -428,7 +428,7 @@ function theme.highlights(colors, config)
       -- Type (and class) definitions and annotations.
       TSType = { fg = colors.yellow },
       -- Built-in types: `i32` in Rust.
-      TSTypeBuiltin = { fg = colors.light_red},
+      TSTypeBuiltin = { fg = colors.orange},
       -- Variable names that don't fit into other categories.
       TSVariable = { fg = colors.fg, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
