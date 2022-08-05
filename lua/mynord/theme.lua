@@ -348,7 +348,7 @@ function theme.highlights(colors, config)
       -- Built-in functions: `print` in Lua.
       TSFuncBuiltin = { fg = colors.yellow, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.dark_blue},
+      TSFuncMacro = { fg = colors.blue},
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
       TSInclude = { fg = colors.blue },
       -- Keywords that don't fit into other categories.
