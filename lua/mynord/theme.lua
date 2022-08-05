@@ -340,7 +340,7 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.purple },
       -- Object and struct fields.
-      TSField = { fg = colors.dark_blue},
+      TSField = { fg = colors.cyan},
       -- Floating-point number literals.
       TSFloat = { fg = colors.orange },
       -- Function calls and definitions.
@@ -356,7 +356,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.purple, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.purple },
+      TSKeywordOperator = { fg = colors.yellow},
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.purple },
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -368,7 +368,7 @@ function theme.highlights(colors, config)
       -- Numeric literals that don't fit into other categories.
       TSNumber = { fg = colors.orange },
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.purple },
+      TSOperator = { fg = colors.yellow},
       -- Parameters of a function.
       TSParameter = { fg = colors.red },
       -- References to parameters of a function.
@@ -384,7 +384,7 @@ function theme.highlights(colors, config)
       -- Keywords related to loops: `for`, `while`, etc.
       TSRepeat = { fg = colors.purple, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.yellow, style = config.styles.strings },
+      TSString = { fg = colors.green, style = config.styles.strings },
       -- Regular expression literals.
       TSStringRegex = { fg = colors.orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
