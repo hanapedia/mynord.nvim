@@ -1,5 +1,5 @@
-local light_colors = require("mynord.colors.onenordlight")
-local dark_colors = require("mynord.colors.onenord")
+local light_colors = require("mynord.colors.mynordlight")
+local dark_colors = require("mynord.colors.mynord")
 
 local function load()
   local theme = require("mynord.config").options.theme
