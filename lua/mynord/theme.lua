@@ -77,7 +77,7 @@ function theme.highlights(colors, config)
       -- any variable name
       Identifier = { fg = colors.fg, style = config.styles.variables },
       -- any string
-      String = { fg = colors.green, config.styles.strings },
+      String = { fg = colors.yellow, config.styles.strings },
 
       htmlLink = { fg = colors.green, style = "underline" },
       htmlArg = { fg = colors.blue },
@@ -384,7 +384,7 @@ function theme.highlights(colors, config)
       -- Keywords related to loops: `for`, `while`, etc.
       TSRepeat = { fg = colors.purple, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.green, style = config.styles.strings },
+      TSString = { fg = colors.yellow, style = config.styles.strings },
       -- Regular expression literals.
       TSStringRegex = { fg = colors.orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
@@ -428,9 +428,9 @@ function theme.highlights(colors, config)
       -- Type (and class) definitions and annotations.
       TSType = { fg = colors.yellow },
       -- Built-in types: `i32` in Rust.
-      TSTypeBuiltin = { fg = colors.orange },
+      TSTypeBuiltin = { fg = colors.pink},
       -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.fg, style = config.styles.variables },
+      TSVariable = { fg = colors.light_green, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
       TSVariableBuiltin = { fg = colors.red, style = config.styles.variables },
     }

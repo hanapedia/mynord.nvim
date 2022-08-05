@@ -1,8 +1,8 @@
-local light_colors = require("onenord.colors.onenordlight")
-local dark_colors = require("onenord.colors.onenord")
+local light_colors = require("mynord.colors.onenordlight")
+local dark_colors = require("mynord.colors.onenord")
 
 local function load()
-  local theme = require("onenord.config").options.theme
+  local theme = require("mynord.config").options.theme
 
   -- if style is set, it takes priority
   -- otherwise, use vim.o.background
