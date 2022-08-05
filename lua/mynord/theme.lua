@@ -362,7 +362,7 @@ function theme.highlights(colors, config)
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
       TSLabel = { fg = colors.purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.blue, style = config.styles.functions },
+      TSMethod = { fg = colors.dark_blue, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.yellow },
       -- Numeric literals that don't fit into other categories.
@@ -374,7 +374,7 @@ function theme.highlights(colors, config)
       -- References to parameters of a function.
       TSParameterReference = { fg = colors.red },
       -- Same as `TSField`.
-      TSProperty = { fg = colors.blue },
+      TSProperty = { fg = colors.green},
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
       TSPunctDelimiter = { fg = colors.dark_blue },
       -- Brackets, braces, parentheses, etc.
