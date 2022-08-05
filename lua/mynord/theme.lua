@@ -325,7 +325,7 @@ function theme.highlights(colors, config)
       -- Line comments and block comments.
       TSComment = { fg = colors.light_gray, style = config.styles.comments },
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-      TSConditional = { fg = colors.purple, style = config.styles.keywords },
+      TSConditional = { fg = colors.orange, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
       TSConstant = { fg = colors.cyan },
       -- Built-in constant values: `nil` in Lua.
@@ -382,9 +382,9 @@ function theme.highlights(colors, config)
       -- Special punctuation that doesn't fit into the previous categories.
       TSPunctSpecial = { fg = colors.dark_blue },
       -- Keywords related to loops: `for`, `while`, etc.
-      TSRepeat = { fg = colors.purple, style = config.styles.keywords },
+      TSRepeat = { fg = colors.orange, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.light_green, style = config.styles.strings },
+      TSString = { fg = colors.green, style = config.styles.strings },
       -- Regular expression literals.
       TSStringRegex = { fg = colors.orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
