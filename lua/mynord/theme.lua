@@ -428,9 +428,9 @@ function theme.highlights(colors, config)
       -- Type (and class) definitions and annotations.
       TSType = { fg = colors.yellow },
       -- Built-in types: `i32` in Rust.
-      TSTypeBuiltin = { fg = colors.pink},
+      TSTypeBuiltin = { fg = colors.light_red},
       -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.light_green, style = config.styles.variables },
+      TSVariable = { fg = colors.green, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
       TSVariableBuiltin = { fg = colors.red, style = config.styles.variables },
     }
