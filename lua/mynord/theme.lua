@@ -344,17 +344,17 @@ function theme.highlights(colors, config)
       -- Floating-point number literals.
       TSFloat = { fg = colors.light_green},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.red, style = config.styles.functions },
+      TSFunction = { fg = colors.blue, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
       TSFuncBuiltin = { fg = colors.yellow, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.orange},
+      TSFuncMacro = { fg = colors.dark_blue},
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
       TSInclude = { fg = colors.blue },
       -- Keywords that don't fit into other categories.
       TSKeyword = { fg = colors.purple, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.red, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.yellow, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
       TSKeywordOperator = { fg = colors.red},
       -- Keywords like `return` and `yield`.
@@ -368,7 +368,7 @@ function theme.highlights(colors, config)
       -- Numeric literals that don't fit into other categories.
       TSNumber = { fg = colors.light_green},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.yellow},
+      TSOperator = { fg = colors.red},
       -- Parameters of a function.
       TSParameter = { fg = colors.red },
       -- References to parameters of a function.
