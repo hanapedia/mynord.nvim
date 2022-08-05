@@ -77,7 +77,7 @@ function theme.highlights(colors, config)
       -- any variable name
       Identifier = { fg = colors.fg, style = config.styles.variables },
       -- any string
-      String = { fg = colors.yellow, config.styles.strings },
+      String = { fg = colors.cyan, config.styles.strings },
 
       htmlLink = { fg = colors.green, style = "underline" },
       htmlArg = { fg = colors.blue },
@@ -340,7 +340,7 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.purple },
       -- Object and struct fields.
-      TSField = { fg = colors.blue },
+      TSField = { fg = colors.dark_blue},
       -- Floating-point number literals.
       TSFloat = { fg = colors.orange },
       -- Function calls and definitions.
@@ -430,7 +430,7 @@ function theme.highlights(colors, config)
       -- Built-in types: `i32` in Rust.
       TSTypeBuiltin = { fg = colors.light_red},
       -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.cyan, style = config.styles.variables },
+      TSVariable = { fg = colors.fg, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
       TSVariableBuiltin = { fg = colors.red, style = config.styles.variables },
     }
