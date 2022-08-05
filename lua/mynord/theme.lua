@@ -340,7 +340,7 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.purple },
       -- Object and struct fields.
-      TSField = { fg = colors.cyan},
+      TSField = { fg = colors.fg},
       -- Floating-point number literals.
       TSFloat = { fg = colors.light_green},
       -- Function calls and definitions.
@@ -352,9 +352,9 @@ function theme.highlights(colors, config)
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
       TSInclude = { fg = colors.blue },
       -- Keywords that don't fit into other categories.
-      TSKeyword = { fg = colors.red, style = config.styles.keywords },
+      TSKeyword = { fg = colors.purple, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.purple, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.orange, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
       TSKeywordOperator = { fg = colors.red},
       -- Keywords like `return` and `yield`.
@@ -362,7 +362,7 @@ function theme.highlights(colors, config)
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
       TSLabel = { fg = colors.purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.dark_blue, style = config.styles.functions },
+      TSMethod = { fg = colors.blue, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.yellow },
       -- Numeric literals that don't fit into other categories.
