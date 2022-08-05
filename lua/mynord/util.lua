@@ -1,4 +1,4 @@
-local theme = require("onenord.theme")
+local theme = require("mynord.theme")
 
 local util = {}
 
@@ -19,7 +19,7 @@ end
 
 -- Load the theme
 function util.load(colors, exec_autocmd)
-  local config = require("onenord.config").options
+  local config = require("mynord.config").options
 
   -- Set the theme environment
   if vim.g.colors_name then
@@ -31,7 +31,7 @@ function util.load(colors, exec_autocmd)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "onenord"
+  vim.g.colors_name = "mynord"
 
   -- Load highlights
   colors = vim.tbl_deep_extend("force", colors, config.custom_colors)

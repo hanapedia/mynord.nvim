@@ -3,8 +3,8 @@ if vim.g.mynord_debug == true then
   package.loaded["mynord"] = nil
   package.loaded["mynord.util"] = nil
   package.loaded["mynord.colors"] = nil
-  package.loaded["mynord.colors.onenord"] = nil
-  package.loaded["mynord.colors.onenordlight"] = nil
+  package.loaded["mynord.colors.mynord"] = nil
+  package.loaded["mynord.colors.mynordlight"] = nil
   package.loaded["mynord.theme"] = nil
 end
 
