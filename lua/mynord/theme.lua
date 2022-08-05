@@ -340,15 +340,15 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.purple },
       -- Object and struct fields.
-      TSField = { fg = colors.fg},
+      TSField = { fg = colors.blue},
       -- Floating-point number literals.
       TSFloat = { fg = colors.light_green},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.blue, style = config.styles.functions },
+      TSFunction = { fg = colors.red, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
       TSFuncBuiltin = { fg = colors.yellow, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.blue },
+      TSFuncMacro = { fg = colors.orange},
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
       TSInclude = { fg = colors.blue },
       -- Keywords that don't fit into other categories.
