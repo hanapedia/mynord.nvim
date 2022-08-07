@@ -1,12 +1,13 @@
 local colors = {
   -- Polar night
-  pn1 = "#2E3440", -- same as bg, 
+  pn1 = "#2E3440", -- same as bg,
   pn2 = "#3B4252", -- For pannels and gutterse
   pn3 = "#434C5E", -- cursor line
   pn4 = "#4C566A", -- comments
   -- Snow Storm
+  ss0 = "#C8D0E0", -- same as fg
   ss1 = "#D8DEE9", -- variables, constants, attributesm and fields
-  ss2 = "#E5E9F0", -- 
+  ss2 = "#E5E9F0", --
   ss3 = "#ECEFF4", -- plain text and braces/brackets
   -- Frost
   frozen_polar_water = "#8FBCBB", -- classes, types and primitives
