@@ -327,7 +327,7 @@ function theme.highlights(colors, config)
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
       TSConditional = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
-      TSConstant = { fg = colors.ss0},
+      TSConstant = { fg = colors.ss0 },
       -- Built-in constant values: `nil` in Lua.
       TSConstBuiltin = { fg = colors.ss3 },
       -- Constants defined by macros: `NULL` in C.
@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.ss0 },
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_purple },
+      TSFloat = { fg = colors.aurora_orange },
       -- Function calls and definitions.
       TSFunction = { fg = colors.clear_ice, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -366,9 +366,9 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.arctic_water },
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_purple },
+      TSNumber = { fg = colors.aurora_orange },
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.aurora_yellow },
+      TSOperator = { fg = colors.aurora_purple },
       -- Parameters of a function.
       TSParameter = { fg = colors.ss0 },
       -- References to parameters of a function.
@@ -394,7 +394,7 @@ function theme.highlights(colors, config)
       -- Tags like HTML tag names.
       TSTag = { fg = colors.arctic_water },
       -- HTML tag attributes.
-      TSTagAttribute = { fg = colors.ss3},
+      TSTagAttribute = { fg = colors.ss3 },
       -- Tag delimiters like `<` `>` `/`.
       TSTagDelimiter = { fg = colors.deep_arctic_water },
       -- Non-structuaurora_red text. Like text in a markup language.
