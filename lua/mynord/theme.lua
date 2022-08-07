@@ -344,7 +344,7 @@ function theme.highlights(colors, config)
       -- Floating-point number literals.
       TSFloat = { fg = colors.light_green},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.blue, style = config.styles.functions },
+      TSFunction = { fg = colors.cyan, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
       TSFuncBuiltin = { fg = colors.yellow, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
@@ -354,7 +354,7 @@ function theme.highlights(colors, config)
       -- Keywords that don't fit into other categories.
       TSKeyword = { fg = colors.purple, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.yellow, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.blue, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
       TSKeywordOperator = { fg = colors.red},
       -- Keywords like `return` and `yield`.
@@ -362,7 +362,7 @@ function theme.highlights(colors, config)
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
       TSLabel = { fg = colors.purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.blue, style = config.styles.functions },
+      TSMethod = { fg = colors.cyan, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.yellow },
       -- Numeric literals that don't fit into other categories.
