@@ -325,7 +325,7 @@ function theme.highlights(colors, config)
       -- Line comments and block comments.
       TSComment = { fg = colors.pn4, style = config.styles.comments },
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-      TSConditional = { fg = colors.arctic_water, style = config.styles.keywords },
+      TSConditional = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
       TSConstant = { fg = colors.ss1},
       -- Built-in constant values: `nil` in Lua.
@@ -370,9 +370,9 @@ function theme.highlights(colors, config)
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
-      TSParameter = { fg = colors.aurora_red },
+      TSParameter = { fg = colors.clear_ice},
       -- References to parameters of a function.
-      TSParameterReference = { fg = colors.aurora_red },
+      TSParameterReference = { fg = colors.clear_ice},
       -- Same as `TSField`.
       TSProperty = { fg = colors.aurora_green},
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
