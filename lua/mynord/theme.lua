@@ -340,29 +340,29 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.arctic_water},
       -- Object and struct fields.
-      TSField = { fg = colors.frozen_polar_water},
+      TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
       TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.clear_ice, style = config.styles.functions },
+      TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
-      TSFuncBuiltin = { fg = colors.clear_ice, style = config.styles.functions },
+      TSFuncBuiltin = { fg = colors.arctic_water, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.clear_ice},
+      TSFuncMacro = { fg = colors.arctic_water },
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
       TSInclude = { fg = colors.deep_arctic_water },
       -- Keywords that don't fit into other categories.
-      TSKeyword = { fg = colors.arctic_water, style = config.styles.keywords },
+      TSKeyword = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.arctic_water, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.arctic_water},
+      TSKeywordOperator = { fg = colors.deep_arctic_water},
       -- Keywords like `return` and `yield`.
-      TSKeywordReturn = { fg = colors.arctic_water},
+      TSKeywordReturn = { fg = colors.deep_arctic_water},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
       TSLabel = { fg = colors.aurora_purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.clear_ice, style = config.styles.functions },
+      TSMethod = { fg = colors.arctic_water, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.aurora_yellow },
       -- Numeric literals that don't fit into other categories.
@@ -382,7 +382,7 @@ function theme.highlights(colors, config)
       -- Special punctuation that doesn't fit into the previous categories.
       TSPunctSpecial = { fg = colors.deep_arctic_water },
       -- Keywords related to loops: `for`, `while`, etc.
-      TSRepeat = { fg = colors.aurora_purple, style = config.styles.keywords },
+      TSRepeat = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- String literals.
       TSString = { fg = colors.aurora_green, style = config.styles.strings },
       -- Regular expression literals.
