@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_purple},
+      TSFloat = { fg = colors.aurora_yellow},
       -- Function calls and definitions.
       TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -356,7 +356,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.deep_arctic_water},
+      TSKeywordOperator = { fg = colors.aurora_purple},
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.deep_arctic_water},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -366,9 +366,9 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.aurora_yellow },
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_purple},
+      TSNumber = { fg = colors.aurora_yellow},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.arctic_water},
+      TSOperator = { fg = colors.aurora_purple},
       -- Parameters of a function.
       TSParameter = { fg = colors.clear_ice},
       -- References to parameters of a function.
