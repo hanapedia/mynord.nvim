@@ -430,9 +430,9 @@ function theme.highlights(colors, config)
       -- Built-in types: `i32` in Rust.
       TSTypeBuiltin = { fg = colors.frozen_polar_water },
       -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.ss1, style = config.styles.variables },
+      TSVariable = { fg = colors.fg, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
-      TSVariableBuiltin = { fg = colors.ss1, style = config.styles.variables },
+      TSVariableBuiltin = { fg = colors.fg, style = config.styles.variables },
     }
 
     return treesitter
