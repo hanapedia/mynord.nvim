@@ -340,7 +340,7 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.arctic_water},
       -- Object and struct fields.
-      TSField = { fg = colors.ss2},
+      TSField = { fg = colors.frozen_polar_water},
       -- Floating-point number literals.
       TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
