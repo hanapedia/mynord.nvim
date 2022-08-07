@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_purple},
+      TSFloat = { fg = colors.aurora_green},
       -- Function calls and definitions.
       TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -366,7 +366,7 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.aurora_yellow },
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_purple},
+      TSNumber = { fg = colors.aurora_green},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
