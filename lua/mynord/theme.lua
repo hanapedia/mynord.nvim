@@ -327,7 +327,7 @@ function theme.highlights(colors, config)
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
       TSConditional = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
-      TSConstant = { fg = colors.ss3 },
+      TSConstant = { fg = colors.ss0},
       -- Built-in constant values: `nil` in Lua.
       TSConstBuiltin = { fg = colors.ss3 },
       -- Constants defined by macros: `NULL` in C.
