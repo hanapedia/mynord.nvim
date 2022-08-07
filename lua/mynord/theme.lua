@@ -317,122 +317,122 @@ function theme.highlights(colors, config)
 
     local treesitter = {
       -- Annotations that can be attached to the code to denote some kind of meta information. e.g. C++/Dart attributes.
-      TSAttribute = { fg = colors.purple },
+      TSAttribute = { fg = colors.aurora_orange},
       -- Boolean literals: `True` and `False` in Python.
-      TSBoolean = { fg = colors.orange },
+      TSBoolean = { fg = colors.aurora_orange },
       -- Character literals: `'a'` in C.
-      TSCharacter = { fg = colors.green },
+      TSCharacter = { fg = colors.aurora_green },
       -- Line comments and block comments.
-      TSComment = { fg = colors.light_gray, style = config.styles.comments },
+      TSComment = { fg = colors.pn4, style = config.styles.comments },
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-      TSConditional = { fg = colors.purple, style = config.styles.keywords },
+      TSConditional = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
-      TSConstant = { fg = colors.cyan },
+      TSConstant = { fg = colors.ss1},
       -- Built-in constant values: `nil` in Lua.
-      TSConstBuiltin = { fg = colors.orange },
+      TSConstBuiltin = { fg = colors.ss1},
       -- Constants defined by macros: `NULL` in C.
-      TSConstMacro = { fg = colors.red },
+      TSConstMacro = { fg = colors.aurora_red },
       -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
-      TSConstructor = { fg = colors.yellow },
+      TSConstructor = { fg = colors.aurora_yellow },
       -- Syntax/parser errors. This might highlight large sections of code while the user is typing
       -- still incomplete code, use a sensible highlight.
       TSError = { fg = colors.error },
       -- Exception related keywords: `try`, `except`, `finally` in Python.
-      TSException = { fg = colors.purple },
+      TSException = { fg = colors.arctic_water},
       -- Object and struct fields.
-      TSField = { fg = colors.blue},
+      TSField = { fg = colors.ss2},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.light_green},
+      TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.cyan, style = config.styles.functions },
+      TSFunction = { fg = colors.clear_ice, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
-      TSFuncBuiltin = { fg = colors.yellow, style = config.styles.functions },
+      TSFuncBuiltin = { fg = colors.clear_ice, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.blue},
+      TSFuncMacro = { fg = colors.clear_ice},
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
-      TSInclude = { fg = colors.blue },
+      TSInclude = { fg = colors.deep_arctic_water },
       -- Keywords that don't fit into other categories.
-      TSKeyword = { fg = colors.purple, style = config.styles.keywords },
+      TSKeyword = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.blue, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.red},
+      TSKeywordOperator = { fg = colors.arctic_water},
       -- Keywords like `return` and `yield`.
-      TSKeywordReturn = { fg = colors.red},
+      TSKeywordReturn = { fg = colors.arctic_water},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
-      TSLabel = { fg = colors.purple },
+      TSLabel = { fg = colors.aurora_purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.cyan, style = config.styles.functions },
+      TSMethod = { fg = colors.clear_ice, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
-      TSNamespace = { fg = colors.yellow },
+      TSNamespace = { fg = colors.aurora_yellow },
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.light_green},
+      TSNumber = { fg = colors.aurora_purple},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.red},
+      TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
-      TSParameter = { fg = colors.red },
+      TSParameter = { fg = colors.aurora_red },
       -- References to parameters of a function.
-      TSParameterReference = { fg = colors.red },
+      TSParameterReference = { fg = colors.aurora_red },
       -- Same as `TSField`.
-      TSProperty = { fg = colors.green},
+      TSProperty = { fg = colors.aurora_green},
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
-      TSPunctDelimiter = { fg = colors.dark_blue },
+      TSPunctDelimiter = { fg = colors.deep_arctic_water },
       -- Brackets, braces, parentheses, etc.
-      TSPunctBracket = { fg = colors.dark_blue },
+      TSPunctBracket = { fg = colors.deep_arctic_water },
       -- Special punctuation that doesn't fit into the previous categories.
-      TSPunctSpecial = { fg = colors.dark_blue },
+      TSPunctSpecial = { fg = colors.deep_arctic_water },
       -- Keywords related to loops: `for`, `while`, etc.
-      TSRepeat = { fg = colors.purple, style = config.styles.keywords },
+      TSRepeat = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.green, style = config.styles.strings },
+      TSString = { fg = colors.aurora_green, style = config.styles.strings },
       -- Regular expression literals.
-      TSStringRegex = { fg = colors.orange },
+      TSStringRegex = { fg = colors.aurora_orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
-      TSStringEscape = { fg = colors.orange },
+      TSStringEscape = { fg = colors.aurora_orange },
       -- Identifiers referring to symbols or atoms.
-      TSSymbol = { fg = colors.cyan },
+      TSSymbol = { fg = colors.clear_ice },
       -- Tags like HTML tag names.
-      TSTag = { fg = colors.yellow },
+      TSTag = { fg = colors.arctic_water},
       -- HTML tag attributes.
-      TSTagAttribute = { fg = colors.blue },
+      TSTagAttribute = { fg = colors.ss2},
       -- Tag delimiters like `<` `>` `/`.
-      TSTagDelimiter = { fg = colors.dark_blue },
-      -- Non-structured text. Like text in a markup language.
-      TSText = { fg = colors.fg },
+      TSTagDelimiter = { fg = colors.deep_arctic_water },
+      -- Non-structuaurora_red text. Like text in a markup language.
+      TSText = { fg = colors.ss3 },
       -- Text to be represented in bold.
-      TSStrong = { fg = colors.purple, style = "bold" },
+      TSStrong = { fg = colors.aurora_purple, style = "bold" },
       -- Text to be represented with emphasis.
-      TSEmphasis = { fg = colors.yellow, style = "italic" },
+      TSEmphasis = { fg = colors.aurora_yellow, style = "italic" },
       -- Text to be represented with an underline.
       TSUnderline = { style = "underline" },
       -- Text that is part of a title.
-      TSTitle = { fg = colors.blue, style = "bold" },
+      TSTitle = { fg = colors.arctic_water, style = "bold" },
       -- Literal or verbatim text.
-      TSLiteral = { fg = colors.green },
+      TSLiteral = { fg = colors.aurora_green },
       -- URIs like hyperlinks or email addresses.
-      TSURI = { fg = colors.cyan, style = "underline" },
+      TSURI = { fg = colors.clear_ice, style = "underline" },
       -- Math environments like LaTeX's `$ ... $`
-      TSMath = { fg = colors.fg },
+      TSMath = { fg = colors.ss3 },
       -- Footnotes, text references, citations, etc.
-      TSTextReference = { fg = colors.purple },
+      TSTextReference = { fg = colors.aurora_purple },
       -- Text environments of markup languages.
-      TSEnvironment = { fg = colors.fg },
+      TSEnvironment = { fg = colors.ss3 },
       -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
-      TSEnvironmentName = { fg = colors.fg },
+      TSEnvironmentName = { fg = colors.ss3 },
       -- Text representation of an informational note.
-      TSNote = { fg = colors.info, style = "bold" },
+      TSNote = { fg = colors.aurora_green, style = "bold" },
       -- Text representation of a warning note.
-      TSWarning = { fg = colors.warn, style = "bold" },
+      TSWarning = { fg = colors.aurora_yellow, style = "bold" },
       -- Text representation of a danger note.
-      TSDanger = { fg = colors.error, style = "bold" },
+      TSDanger = { fg = colors.aurora_red, style = "bold" },
       -- Type (and class) definitions and annotations.
-      TSType = { fg = colors.yellow },
+      TSType = { fg = colors.frozen_polar_water},
       -- Built-in types: `i32` in Rust.
-      TSTypeBuiltin = { fg = colors.orange},
+      TSTypeBuiltin = { fg = colors.frozen_polar_water},
       -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.fg, style = config.styles.variables },
+      TSVariable = { fg = colors.ss3, style = config.styles.variables },
       -- Variable names defined by the language: `this` or `self` in Javascript.
-      TSVariableBuiltin = { fg = colors.red, style = config.styles.variables },
+      TSVariableBuiltin = { fg = colors.ss3, style = config.styles.variables },
     }
 
     return treesitter

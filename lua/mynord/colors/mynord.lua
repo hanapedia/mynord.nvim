@@ -1,4 +1,25 @@
 local colors = {
+  -- Polar night
+  pn1 = "#2E3440", -- same as bg, 
+  pn2 = "#3B4252", -- For pannels and gutterse
+  pn3 = "#434C5E", -- cursor line
+  pn4 = "#4C566A", -- comments
+  -- Snow Storm
+  ss1 = "#D8DEE9", -- variables, constants, attributesm and fields
+  ss2 = "#E5E9F0", -- 
+  ss3 = "#ECEFF4", -- plain text and braces/brackets
+  -- Frost
+  frozen_polar_water = "#8FBCBB", -- classes, types and primitives
+  clear_ice = "#88C0D0", -- declaration and calls of functions, methods
+  arctic_water = "#81A1C1", -- operators, tags, reserved keywords, units, punctuations
+  deep_arctic_water = "#5E81AC", -- pre-processor statements
+  -- Aurora
+  aurora_red = "#BF616A", -- errors
+  aurora_orange = "#D08770", -- annotations and decorators
+  aurora_yellow = "#EBCB8B", -- warnings
+  aurora_green = "#A3BE8C", -- string
+  aurora_purple = "#B48EAD", -- numbers
+
   fg = "#C8D0E0",
   fg_light = "#E5E9F0",
   bg = "#2E3440",
