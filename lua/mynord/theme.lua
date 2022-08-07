@@ -325,7 +325,7 @@ function theme.highlights(colors, config)
       -- Line comments and block comments.
       TSComment = { fg = colors.pn4, style = config.styles.comments },
       -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-      TSConditional = { fg = colors.aurora_purple, style = config.styles.keywords },
+      TSConditional = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
       TSConstant = { fg = colors.ss1},
       -- Built-in constant values: `nil` in Lua.
@@ -333,36 +333,36 @@ function theme.highlights(colors, config)
       -- Constants defined by macros: `NULL` in C.
       TSConstMacro = { fg = colors.aurora_red },
       -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
-      TSConstructor = { fg = colors.arctic_water},
+      TSConstructor = { fg = colors.clear_ice},
       -- Syntax/parser errors. This might highlight large sections of code while the user is typing
       -- still incomplete code, use a sensible highlight.
       TSError = { fg = colors.error },
       -- Exception related keywords: `try`, `except`, `finally` in Python.
-      TSException = { fg = colors.aurora_purple},
+      TSException = { fg = colors.arctic_water},
       -- Object and struct fields.
-      TSField = { fg = colors.clear_ice},
+      TSField = { fg = colors.aurora_purple},
       -- Floating-point number literals.
       TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
-      TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
+      TSFunction = { fg = colors.clear_ice, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
-      TSFuncBuiltin = { fg = colors.arctic_water, style = config.styles.functions },
+      TSFuncBuiltin = { fg = colors.clear_ice, style = config.styles.functions },
       -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.arctic_water },
+      TSFuncMacro = { fg = colors.clear_ice},
       -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
-      TSInclude = { fg = colors.aurora_purple},
+      TSInclude = { fg = colors.arctic_water},
       -- Keywords that don't fit into other categories.
-      TSKeyword = { fg = colors.aurora_purple, style = config.styles.keywords },
+      TSKeyword = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.aurora_purple, style = config.styles.keywords },
+      TSKeywordFunction = { fg = colors.arctic_water, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.arctic_water},
+      TSKeywordOperator = { fg = colors.deep_arctic_water},
       -- Keywords like `return` and `yield`.
-      TSKeywordReturn = { fg = colors.aurora_purple},
+      TSKeywordReturn = { fg = colors.arctic_water},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
       TSLabel = { fg = colors.aurora_purple },
       -- Method calls and definitions.
-      TSMethod = { fg = colors.arctic_water, style = config.styles.functions },
+      TSMethod = { fg = colors.clear_ice, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.deep_arctic_water},
       -- Numeric literals that don't fit into other categories.
@@ -370,11 +370,11 @@ function theme.highlights(colors, config)
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
-      TSParameter = { fg = colors.clear_ice},
+      TSParameter = { fg = colors.ss3},
       -- References to parameters of a function.
-      TSParameterReference = { fg = colors.clear_ice},
+      TSParameterReference = { fg = colors.ss3},
       -- Same as `TSField`.
-      TSProperty = { fg = colors.clear_ice},
+      TSProperty = { fg = colors.aurora_purple},
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
       TSPunctDelimiter = { fg = colors.deep_arctic_water },
       -- Brackets, braces, parentheses, etc.
@@ -382,7 +382,7 @@ function theme.highlights(colors, config)
       -- Special punctuation that doesn't fit into the previous categories.
       TSPunctSpecial = { fg = colors.deep_arctic_water },
       -- Keywords related to loops: `for`, `while`, etc.
-      TSRepeat = { fg = colors.aurora_purple, style = config.styles.keywords },
+      TSRepeat = { fg = colors.arctic_water, style = config.styles.keywords },
       -- String literals.
       TSString = { fg = colors.aurora_green, style = config.styles.strings },
       -- Regular expression literals.
