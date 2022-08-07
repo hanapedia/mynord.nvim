@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_yellow},
+      TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
       TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -356,7 +356,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.aurora_purple},
+      TSKeywordOperator = { fg = colors.arctic_water},
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.deep_arctic_water},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -366,9 +366,9 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.aurora_yellow },
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_yellow},
+      TSNumber = { fg = colors.aurora_purple},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.aurora_purple},
+      TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
       TSParameter = { fg = colors.clear_ice},
       -- References to parameters of a function.
@@ -384,7 +384,7 @@ function theme.highlights(colors, config)
       -- Keywords related to loops: `for`, `while`, etc.
       TSRepeat = { fg = colors.deep_arctic_water, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.aurora_green, style = config.styles.strings },
+      TSString = { fg = colors.aurora_purple, style = config.styles.strings },
       -- Regular expression literals.
       TSStringRegex = { fg = colors.aurora_orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
