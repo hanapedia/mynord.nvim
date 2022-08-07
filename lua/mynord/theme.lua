@@ -340,7 +340,7 @@ function theme.highlights(colors, config)
       -- Exception related keywords: `try`, `except`, `finally` in Python.
       TSException = { fg = colors.aurora_purple},
       -- Object and struct fields.
-      TSField = { fg = colors.arctic_water},
+      TSField = { fg = colors.ss3},
       -- Floating-point number literals.
       TSFloat = { fg = colors.aurora_purple },
       -- Function calls and definitions.
@@ -356,7 +356,7 @@ function theme.highlights(colors, config)
       -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
       TSKeywordFunction = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.deep_arctic_water },
+      TSKeywordOperator = { fg = colors.aurora_purple},
       -- Keywords like `return` and `yield`.
       TSKeywordReturn = { fg = colors.aurora_purple},
       -- GOTO labels: `label:` in C, and `::label::` in Lua.
@@ -364,17 +364,17 @@ function theme.highlights(colors, config)
       -- Method calls and definitions.
       TSMethod = { fg = colors.clear_ice, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
-      TSNamespace = { fg = colors.deep_arctic_water },
+      TSNamespace = { fg = colors.arctic_water},
       -- Numeric literals that don't fit into other categories.
       TSNumber = { fg = colors.aurora_purple },
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.deep_arctic_water },
+      TSOperator = { fg = colors.aurora_yellow},
       -- Parameters of a function.
       TSParameter = { fg = colors.ss3 },
       -- References to parameters of a function.
       TSParameterReference = { fg = colors.ss3 },
       -- Same as `TSField`.
-      TSProperty = { fg = colors.arctic_water},
+      TSProperty = { fg = colors.ss3},
       -- Punctuation delimiters: Periods, commas, semicolons, etc.
       TSPunctDelimiter = { fg = colors.deep_arctic_water },
       -- Brackets, braces, parentheses, etc.
