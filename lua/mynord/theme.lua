@@ -333,7 +333,7 @@ function theme.highlights(colors, config)
       -- Constants defined by macros: `NULL` in C.
       TSConstMacro = { fg = colors.aurora_red },
       -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
-      TSConstructor = { fg = colors.aurora_yellow },
+      TSConstructor = { fg = colors.arctic_water},
       -- Syntax/parser errors. This might highlight large sections of code while the user is typing
       -- still incomplete code, use a sensible highlight.
       TSError = { fg = colors.error },
@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_orange},
+      TSFloat = { fg = colors.aurora_purple},
       -- Function calls and definitions.
       TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -366,7 +366,7 @@ function theme.highlights(colors, config)
       -- Identifiers referring to modules and namespaces.
       TSNamespace = { fg = colors.deep_arctic_water},
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_orange},
+      TSNumber = { fg = colors.aurora_purple},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
