@@ -342,7 +342,7 @@ function theme.highlights(colors, config)
       -- Object and struct fields.
       TSField = { fg = colors.clear_ice},
       -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_green},
+      TSFloat = { fg = colors.aurora_orange},
       -- Function calls and definitions.
       TSFunction = { fg = colors.arctic_water, style = config.styles.functions },
       -- Built-in functions: `print` in Lua.
@@ -364,9 +364,9 @@ function theme.highlights(colors, config)
       -- Method calls and definitions.
       TSMethod = { fg = colors.arctic_water, style = config.styles.functions },
       -- Identifiers referring to modules and namespaces.
-      TSNamespace = { fg = colors.frozen_polar_water},
+      TSNamespace = { fg = colors.deep_arctic_water},
       -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_green},
+      TSNumber = { fg = colors.aurora_orange},
       -- Binary or unary operators: `+`, and also `->` and `*` in C.
       TSOperator = { fg = colors.arctic_water},
       -- Parameters of a function.
@@ -384,7 +384,7 @@ function theme.highlights(colors, config)
       -- Keywords related to loops: `for`, `while`, etc.
       TSRepeat = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- String literals.
-      TSString = { fg = colors.aurora_purple, style = config.styles.strings },
+      TSString = { fg = colors.aurora_green, style = config.styles.strings },
       -- Regular expression literals.
       TSStringRegex = { fg = colors.aurora_orange },
       -- Escape characters within a string: `\n`, `\t`, etc.
