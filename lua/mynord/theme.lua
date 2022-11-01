@@ -317,122 +317,122 @@ function theme.highlights(colors, config)
 
     local treesitter = {
       -- Annotations that can be attached to the code to denote some kind of meta information. e.g. C++/Dart attributes.
-      TSAttribute = { fg = colors.aurora_orange },
-      -- Boolean literals: `True` and `False` in Python.
-      TSBoolean = { fg = colors.deep_arctic_water },
-      -- Character literals: `'a'` in C.
-      TSCharacter = { fg = colors.aurora_green },
-      -- Line comments and block comments.
-      TSComment = { fg = colors.pn4, style = config.styles.comments },
-      -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-      TSConditional = { fg = colors.aurora_purple, style = config.styles.keywords },
-      -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
-      TSConstant = { fg = colors.ss0 },
-      -- Built-in constant values: `nil` in Lua.
-      TSConstBuiltin = { fg = colors.ss3 },
-      -- Constants defined by macros: `NULL` in C.
-      TSConstMacro = { fg = colors.aurora_red },
-      -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
-      TSConstructor = { fg = colors.clear_ice },
-      -- Syntax/parser errors. This might highlight large sections of code while the user is typing
+      ["@attribute"] = { fg = colors.aurora_orange },
+      -- boolean literals: `true` and `false` in python.
+      ["@boolean"] = { fg = colors.deep_arctic_water },
+      -- character literals: `'a'` in c.
+      ["@character"] = { fg = colors.aurora_green },
+      -- line comments and block comments.
+      ["@comment"] = { fg = colors.pn4, style = config.styles.comments },
+      -- keywords related to conditionals: `if`, `when`, `cond`, etc.
+      ["@conditional"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      -- constants identifiers. these might not be semantically constant. e.g. uppercase variables in python.
+      ["@constant"] = { fg = colors.ss0 },
+      -- built-in constant values: `nil` in lua.
+      ["@constant.builtin"] = { fg = colors.ss3 },
+      -- constants defined by macros: `null` in c.
+      ["@constant.macro"] = { fg = colors.aurora_red },
+      -- constructor calls and definitions: `{}` in lua, and java constructors.
+      ["@constructor"] = { fg = colors.clear_ice },
+      -- syntax/parser errors. this might highlight large sections of code while the user is typing
       -- still incomplete code, use a sensible highlight.
-      TSError = { fg = colors.error },
-      -- Exception related keywords: `try`, `except`, `finally` in Python.
-      TSException = { fg = colors.aurora_purple },
-      -- Object and struct fields.
-      TSField = { fg = colors.ss0 },
-      -- Floating-point number literals.
-      TSFloat = { fg = colors.aurora_orange },
-      -- Function calls and definitions.
-      TSFunction = { fg = colors.clear_ice, style = config.styles.functions },
-      -- Built-in functions: `print` in Lua.
-      TSFuncBuiltin = { fg = colors.clear_ice, style = config.styles.functions },
-      -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
-      TSFuncMacro = { fg = colors.clear_ice },
-      -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
-      TSInclude = { fg = colors.aurora_purple },
-      -- Keywords that don't fit into other categories.
-      TSKeyword = { fg = colors.aurora_purple, style = config.styles.keywords },
-      -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-      TSKeywordFunction = { fg = colors.aurora_purple, style = config.styles.keywords },
-      -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
-      TSKeywordOperator = { fg = colors.aurora_purple },
-      -- Keywords like `return` and `yield`.
-      TSKeywordReturn = { fg = colors.aurora_purple },
-      -- GOTO labels: `label:` in C, and `::label::` in Lua.
-      TSLabel = { fg = colors.aurora_purple },
-      -- Method calls and definitions.
-      TSMethod = { fg = colors.clear_ice, style = config.styles.functions },
-      -- Identifiers referring to modules and namespaces.
-      TSNamespace = { fg = colors.arctic_water },
-      -- Numeric literals that don't fit into other categories.
-      TSNumber = { fg = colors.aurora_orange },
-      -- Binary or unary operators: `+`, and also `->` and `*` in C.
-      TSOperator = { fg = colors.aurora_purple },
-      -- Parameters of a function.
-      TSParameter = { fg = colors.ss0 },
-      -- References to parameters of a function.
-      TSParameterReference = { fg = colors.ss0 },
-      -- Same as `TSField`.
-      TSProperty = { fg = colors.ss0 },
-      -- Punctuation delimiters: Periods, commas, semicolons, etc.
-      TSPunctDelimiter = { fg = colors.deep_arctic_water },
-      -- Brackets, braces, parentheses, etc.
-      TSPunctBracket = { fg = colors.deep_arctic_water },
-      -- Special punctuation that doesn't fit into the previous categories.
-      TSPunctSpecial = { fg = colors.deep_arctic_water },
-      -- Keywords related to loops: `for`, `while`, etc.
-      TSRepeat = { fg = colors.aurora_purple, style = config.styles.keywords },
-      -- String literals.
-      TSString = { fg = colors.aurora_green, style = config.styles.strings },
-      -- Regular expression literals.
-      TSStringRegex = { fg = colors.aurora_orange },
-      -- Escape characters within a string: `\n`, `\t`, etc.
-      TSStringEscape = { fg = colors.aurora_orange },
-      -- Identifiers referring to symbols or atoms.
-      TSSymbol = { fg = colors.clear_ice },
-      -- Tags like HTML tag names.
-      TSTag = { fg = colors.arctic_water },
-      -- HTML tag attributes.
-      TSTagAttribute = { fg = colors.ss3 },
-      -- Tag delimiters like `<` `>` `/`.
-      TSTagDelimiter = { fg = colors.deep_arctic_water },
-      -- Non-structuaurora_red text. Like text in a markup language.
-      TSText = { fg = colors.ss3 },
-      -- Text to be represented in bold.
-      TSStrong = { fg = colors.aurora_purple, style = "bold" },
-      -- Text to be represented with emphasis.
-      TSEmphasis = { fg = colors.aurora_yellow, style = "italic" },
-      -- Text to be represented with an underline.
-      TSUnderline = { style = "underline" },
-      -- Text that is part of a title.
-      TSTitle = { fg = colors.arctic_water, style = "bold" },
-      -- Literal or verbatim text.
-      TSLiteral = { fg = colors.aurora_green },
-      -- URIs like hyperlinks or email addresses.
-      TSURI = { fg = colors.clear_ice, style = "underline" },
-      -- Math environments like LaTeX's `$ ... $`
-      TSMath = { fg = colors.ss3 },
-      -- Footnotes, text references, citations, etc.
-      TSTextReference = { fg = colors.aurora_purple },
-      -- Text environments of markup languages.
-      TSEnvironment = { fg = colors.ss3 },
-      -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
-      TSEnvironmentName = { fg = colors.ss3 },
-      -- Text representation of an informational note.
-      TSNote = { fg = colors.aurora_green, style = "bold" },
-      -- Text representation of a warning note.
-      TSWarning = { fg = colors.aurora_yellow, style = "bold" },
-      -- Text representation of a danger note.
-      TSDanger = { fg = colors.aurora_red, style = "bold" },
-      -- Type (and class) definitions and annotations.
-      TSType = { fg = colors.frozen_polar_water },
-      -- Built-in types: `i32` in Rust.
-      TSTypeBuiltin = { fg = colors.frozen_polar_water },
-      -- Variable names that don't fit into other categories.
-      TSVariable = { fg = colors.ss0, style = config.styles.variables },
-      -- Variable names defined by the language: `this` or `self` in Javascript.
-      TSVariableBuiltin = { fg = colors.ss0, style = config.styles.variables },
+      ["@error"] = { fg = colors.error },
+      -- exception related keywords: `try`, `except`, `finally` in python.
+      ["@exception"] = { fg = colors.aurora_purple },
+      -- object and struct fields.
+      ["@field"] = { fg = colors.ss0 },
+      -- floating-point number literals.
+      ["@float"] = { fg = colors.aurora_orange },
+      -- function calls and definitions.
+      ["@function"] = { fg = colors.clear_ice, style = config.styles.functions },
+      -- built-in functions: `print` in lua.
+      ["@function.builtin"] = { fg = colors.clear_ice, style = config.styles.functions },
+      -- macro defined functions (calls and definitions): each `macro_rules` in rust.
+      ["@function.macro"] = { fg = colors.clear_ice },
+      -- file or module inclusion keywords: `#include` in c, `use` or `extern crate` in rust.
+      ["@include"] = { fg = colors.aurora_purple },
+      -- keywords that don't fit into other categories.
+      ["@keyword"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      -- keywords used to define a function: `function` in lua, `def` and `lambda` in python.
+      ["@keyword.function"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      -- unary and binary operators that are english words: `and`, `or` in python; `sizeof` in c.
+      ["@keyword.operator"] = { fg = colors.aurora_purple },
+      -- keywords like `return` and `yield`.
+      ["@keyword.return"] = { fg = colors.aurora_purple },
+      -- goto labels: `label:` in c, and `::label::` in lua.
+      ["@label"] = { fg = colors.aurora_purple },
+      -- method calls and definitions.
+      ["@method"] = { fg = colors.clear_ice, style = config.styles.functions },
+      -- identifiers referring to modules and namespaces.
+      ["@namespace"] = { fg = colors.arctic_water },
+      -- numeric literals that don't fit into other categories.
+      ["@number"] = { fg = colors.aurora_orange },
+      -- binary or unary operators: `+`, and also `->` and `*` in c.
+      ["@operator"] = { fg = colors.aurora_purple },
+      -- parameters of a function.
+      ["@parameter"] = { fg = colors.ss0 },
+      -- references to parameters of a function.
+      ["@parameter.reference"] = { fg = colors.ss0 },
+      -- same as `["@field`.
+      ["@property"] = { fg = colors.ss0 },
+      -- punctuation delimiters: periods, commas, semicolons, etc.
+      ["@punctuation.delimiter"] = { fg = colors.deep_arctic_water },
+      -- brackets, braces, parentheses, etc.
+      ["@punctuation.bracket"] = { fg = colors.deep_arctic_water },
+      -- special punctuation that doesn't fit into the previous categories.
+      ["@punctuation.special"] = { fg = colors.deep_arctic_water },
+      -- keywords related to loops: `for`, `while`, etc.
+      ["@repeat"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      -- string literals.
+      ["@string"] = { fg = colors.aurora_green, style = config.styles.strings },
+      -- regular expression literals.
+      ["@string.regex"] = { fg = colors.aurora_orange },
+      -- escape characters within a string: `\n`, `\t`, etc.
+      ["@string.escape"] = { fg = colors.aurora_orange },
+      -- identifiers referring to symbols or atoms.
+      ["@symbol"] = { fg = colors.clear_ice },
+      -- tags like html tag names.
+      ["@tag"] = { fg = colors.arctic_water },
+      -- html tag attributes.
+      ["@tag.attribute"] = { fg = colors.ss3 },
+      -- tag delimiters like `<` `>` `/`.
+      ["@tag.delimiter"] = { fg = colors.deep_arctic_water },
+      -- non-structuaurora_red text. like text in a markup language.
+      ["@text"] = { fg = colors.ss3 },
+      -- text to be represented in bold.
+      ["@text.strong"] = { fg = colors.aurora_purple, style = "bold" },
+      -- text to be represented with emphasis.
+      ["@text.emphasis"] = { fg = colors.aurora_yellow, style = "italic" },
+      -- text to be represented with an underline.
+      ["@text.underline"] = { style = "underline" },
+      -- text that is part of a title.
+      ["@text.title"] = { fg = colors.arctic_water, style = "bold" },
+      -- literal or verbatim text.
+      ["@text.literal"] = { fg = colors.aurora_green },
+      -- uris like hyperlinks or email addresses.
+      ["@text.uri"] = { fg = colors.clear_ice, style = "underline" },
+      -- math environments like latex's `$ ... $`
+      ["@text.math"] = { fg = colors.ss3 },
+      -- footnotes, text references, citations, etc.
+      ["@text.reference"] = { fg = colors.aurora_purple },
+      -- text environments of markup languages.
+      ["@text.environment"] = { fg = colors.ss3 },
+      -- text/string indicating the type of text environment. like the name of a `\begin` block in latex.
+      ["@text.environment.name"] = { fg = colors.ss3 },
+      -- text representation of an informational note.
+      ["@note"] = { fg = colors.aurora_green, style = "bold" },
+      -- text representation of a warning note.
+      ["@warning"] = { fg = colors.aurora_yellow, style = "bold" },
+      -- text representation of a danger note.
+      ["@danger"] = { fg = colors.aurora_red, style = "bold" },
+      -- type (and class) definitions and annotations.
+      ["@type"] = { fg = colors.frozen_polar_water },
+      -- built-in types: `i32` in rust.
+      ["@type.builtin"] = { fg = colors.frozen_polar_water },
+      -- variable names that don't fit into other categories.
+      ["@variable"] = { fg = colors.ss0, style = config.styles.variables },
+      -- variable names defined by the language: `this` or `self` in javascript.
+      ["@variable.builtin"] = { fg = colors.ss0, style = config.styles.variables },
     }
 
     return treesitter
