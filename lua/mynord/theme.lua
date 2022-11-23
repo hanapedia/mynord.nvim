@@ -483,7 +483,7 @@ function theme.highlights(colors, config)
       -- used to underline "Hint" diagnostics.
       LspDiagnosticsUnderlineHint = { style = config.styles.diagnostics, sp = colors.hint },
       -- used for highlighting "text" references
-      LspReferenceText = { style = "underline", sp = colors.yellow },
+      LspReferenceText = { style = "bold", sp = colors.yellow, fg = colors.yellow },
       -- used for highlighting "read" references
       LspReferenceRead = { style = "underline", sp = colors.yellow },
       -- used for highlighting "write" references
