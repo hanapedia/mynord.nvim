@@ -487,7 +487,7 @@ function theme.highlights(colors, config)
       -- used for highlighting "read" references
       LspReferenceRead = { style = "bold", sp = colors.yellow, fg = colors.yellow },
       -- used for highlighting "write" references
-      LspReferenceWrite = { style = "underline", sp = colors.yellow },
+      LspReferenceWrite = { style = "bold", sp = colors.yellow, fg = colors.yellow },
 
       LspSignatureActiveParameter = { fg = colors.none, bg = colors.highlight_dark, style = "bold" },
       LspCodeLens = { fg = colors.light_gray },
