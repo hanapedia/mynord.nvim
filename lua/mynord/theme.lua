@@ -485,7 +485,7 @@ function theme.highlights(colors, config)
       -- used for highlighting "text" references
       LspReferenceText = { style = "bold", sp = colors.yellow, fg = colors.yellow },
       -- used for highlighting "read" references
-      LspReferenceRead = { style = "underline", sp = colors.yellow },
+      LspReferenceRead = { style = "bold", sp = colors.yellow, fg = colors.yellow },
       -- used for highlighting "write" references
       LspReferenceWrite = { style = "underline", sp = colors.yellow },
 
