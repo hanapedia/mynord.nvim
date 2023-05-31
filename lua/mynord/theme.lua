@@ -438,6 +438,28 @@ function theme.highlights(colors, config)
     return treesitter
   end
 
+  local function load_semantic()
+    -- Lsp semantics highlight groups
+
+    local semantics = {
+      ['@lsp.type.namespace'] = { fg = colors.arctic_water },
+      ['@lsp.type.type'] = { fg = colors.frozen_polar_water },
+      ['@lsp.type.class'] = { fg = colors.frozen_polar_water },
+      ['@lsp.type.enum'] = { fg = colors.frozen_polar_water },
+      ['@lsp.type.interface'] = { fg = colors.frozen_polar_water },
+      ['@lsp.type.struct'] = { fg = colors.aurora_purple },
+      ['@lsp.type.parameter'] = { fg = colors.ss0 },
+      ['@lsp.type.variable'] = { fg = colors.ss0, style = config.styles.variables },
+      ['@lsp.type.property'] = { fg = colors.ss0 },
+      ['@lsp.type.enumMember'] = { fg = colors.ss0 },
+      ['@lsp.type.function'] = { fg = colors.clear_ice, style = config.styles.functions },
+      ['@lsp.type.method'] = { fg = colors.clear_ice, style = config.styles.functions },
+      ['@lsp.type.macro'] = { fg = colors.clear_ice },
+      ['@lsp.type.decorator'] = { fg = colors.clear_ice, style = config.styles.functions },
+    }
+    return semantics
+  end
+
   local function load_lsp()
     -- Lsp highlight groups
 
@@ -593,18 +615,18 @@ function theme.highlights(colors, config)
       NeogitNotificationError = { fg = colors.error },
 
       -- GitGutter
-      GitGutterAdd = { fg = colors.diff_add }, -- diff mode: Added line |diff.txt|
+      GitGutterAdd = { fg = colors.diff_add },       -- diff mode: Added line |diff.txt|
       GitGutterChange = { fg = colors.diff_change }, -- diff mode: Changed line |diff.txt|
       GitGutterDelete = { fg = colors.diff_remove }, -- diff mode: Deleted line |diff.txt|
 
       -- GitSigns
-      GitSignsAdd = { fg = colors.diff_add }, -- diff mode: Added line |diff.txt|
-      GitSignsAddNr = { fg = colors.diff_add }, -- diff mode: Added line |diff.txt|
-      GitSignsAddLn = { fg = colors.diff_add }, -- diff mode: Added line |diff.txt|
-      GitSignsChange = { fg = colors.diff_change }, -- diff mode: Changed line |diff.txt|
+      GitSignsAdd = { fg = colors.diff_add },         -- diff mode: Added line |diff.txt|
+      GitSignsAddNr = { fg = colors.diff_add },       -- diff mode: Added line |diff.txt|
+      GitSignsAddLn = { fg = colors.diff_add },       -- diff mode: Added line |diff.txt|
+      GitSignsChange = { fg = colors.diff_change },   -- diff mode: Changed line |diff.txt|
       GitSignsChangeNr = { fg = colors.diff_change }, -- diff mode: Changed line |diff.txt|
       GitSignsChangeLn = { fg = colors.diff_change }, -- diff mode: Changed line |diff.txt|
-      GitSignsDelete = { fg = colors.diff_remove }, -- diff mode: Deleted line |diff.txt|
+      GitSignsDelete = { fg = colors.diff_remove },   -- diff mode: Deleted line |diff.txt|
       GitSignsDeleteNr = { fg = colors.diff_remove }, -- diff mode: Deleted line |diff.txt|
       GitSignsDeleteLn = { fg = colors.diff_remove }, -- diff mode: Deleted line |diff.txt|
 
@@ -818,7 +840,7 @@ function theme.highlights(colors, config)
     vim.g.terminal_color_14 = colors.cyan
   end
 
-  return vim.tbl_deep_extend("error", load_syntax(), load_editor(), load_treesitter(), load_lsp(), load_plugins())
+  return vim.tbl_deep_extend("error", load_syntax(), load_editor(), load_treesitter(), load_semantic(), load_lsp(), load_plugins())
 end
 
 return theme
