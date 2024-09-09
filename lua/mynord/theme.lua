@@ -325,7 +325,7 @@ function theme.highlights(colors, config)
       -- line comments and block comments.
       ["@comment"] = { fg = colors.pn4, style = config.styles.comments },
       -- keywords related to conditionals: `if`, `when`, `cond`, etc.
-      ["@conditional"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      ["@keyword.conditional"] = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- constants identifiers. these might not be semantically constant. e.g. uppercase variables in python.
       ["@constant"] = { fg = colors.ss0 },
       -- built-in constant values: `nil` in lua.
@@ -338,11 +338,11 @@ function theme.highlights(colors, config)
       -- still incomplete code, use a sensible highlight.
       ["@error"] = { fg = colors.error },
       -- exception related keywords: `try`, `except`, `finally` in python.
-      ["@exception"] = { fg = colors.aurora_purple },
+      ["@keyword.exception"] = { fg = colors.aurora_purple },
       -- object and struct fields.
-      ["@field"] = { fg = colors.ss0 },
+      ["@variable.member"] = { fg = colors.ss0 },
       -- floating-point number literals.
-      ["@float"] = { fg = colors.aurora_orange },
+      ["@number.float"] = { fg = colors.aurora_orange },
       -- function calls and definitions.
       ["@function"] = { fg = colors.clear_ice, style = config.styles.functions },
       -- built-in functions: `print` in lua.
@@ -350,7 +350,7 @@ function theme.highlights(colors, config)
       -- macro defined functions (calls and definitions): each `macro_rules` in rust.
       ["@function.macro"] = { fg = colors.clear_ice },
       -- file or module inclusion keywords: `#include` in c, `use` or `extern crate` in rust.
-      ["@include"] = { fg = colors.aurora_purple },
+      ["@keyword.import"] = { fg = colors.aurora_purple },
       -- keywords that don't fit into other categories.
       ["@keyword"] = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- keywords used to define a function: `function` in lua, `def` and `lambda` in python.
@@ -362,15 +362,15 @@ function theme.highlights(colors, config)
       -- goto labels: `label:` in c, and `::label::` in lua.
       ["@label"] = { fg = colors.aurora_purple },
       -- method calls and definitions.
-      ["@method"] = { fg = colors.clear_ice, style = config.styles.functions },
+      ["@function.method"] = { fg = colors.clear_ice, style = config.styles.functions },
       -- identifiers referring to modules and namespaces.
-      ["@namespace"] = { fg = colors.arctic_water },
+      ["@module"] = { fg = colors.arctic_water },
       -- numeric literals that don't fit into other categories.
       ["@number"] = { fg = colors.aurora_orange },
       -- binary or unary operators: `+`, and also `->` and `*` in c.
       ["@operator"] = { fg = colors.aurora_purple },
       -- parameters of a function.
-      ["@parameter"] = { fg = colors.ss0 },
+      ["@variable.parameter"] = { fg = colors.ss0 },
       -- references to parameters of a function.
       ["@parameter.reference"] = { fg = colors.ss0 },
       -- same as `["@field`.
@@ -382,7 +382,7 @@ function theme.highlights(colors, config)
       -- special punctuation that doesn't fit into the previous categories.
       ["@punctuation.special"] = { fg = colors.deep_arctic_water },
       -- keywords related to loops: `for`, `while`, etc.
-      ["@repeat"] = { fg = colors.aurora_purple, style = config.styles.keywords },
+      ["@keyword.repeat"] = { fg = colors.aurora_purple, style = config.styles.keywords },
       -- string literals.
       ["@string"] = { fg = colors.aurora_green, style = config.styles.strings },
       -- regular expression literals.
@@ -390,7 +390,7 @@ function theme.highlights(colors, config)
       -- escape characters within a string: `\n`, `\t`, etc.
       ["@string.escape"] = { fg = colors.aurora_orange },
       -- identifiers referring to symbols or atoms.
-      ["@symbol"] = { fg = colors.clear_ice },
+      ["@string.special.symbol"] = { fg = colors.clear_ice },
       -- tags like html tag names.
       ["@tag"] = { fg = colors.arctic_water },
       -- html tag attributes.
@@ -398,33 +398,37 @@ function theme.highlights(colors, config)
       -- tag delimiters like `<` `>` `/`.
       ["@tag.delimiter"] = { fg = colors.deep_arctic_water },
       -- non-structuaurora_red text. like text in a markup language.
-      ["@text"] = { fg = colors.ss3 },
+      ["@markup"] = { fg = colors.ss3 },
       -- text to be represented in bold.
-      ["@text.strong"] = { fg = colors.aurora_purple, style = "bold" },
+      ["@markup.strong"] = { fg = colors.aurora_purple, style = "bold" },
       -- text to be represented with emphasis.
-      ["@text.emphasis"] = { fg = colors.aurora_yellow, style = "italic" },
+      ["@markup.italic"] = { fg = colors.aurora_yellow, style = "italic" },
       -- text to be represented with an underline.
-      ["@text.underline"] = { style = "underline" },
+      ["@markup.underline"] = { style = "underline" },
       -- text that is part of a title.
-      ["@text.title"] = { fg = colors.arctic_water, style = "bold" },
+      ["@markup.heading"] = { fg = colors.arctic_water, style = "bold" },
       -- literal or verbatim text.
-      ["@text.literal"] = { fg = colors.aurora_green },
+      ["@markup.raw"] = { fg = colors.aurora_green },
       -- uris like hyperlinks or email addresses.
-      ["@text.uri"] = { fg = colors.clear_ice, style = "underline" },
+      ["@markup.link.url"] = { fg = colors.clear_ice, style = "underline" },
       -- math environments like latex's `$ ... $`
-      ["@text.math"] = { fg = colors.ss3 },
+      ["@markup.math"] = { fg = colors.ss3 },
       -- footnotes, text references, citations, etc.
       ["@text.reference"] = { fg = colors.aurora_purple },
       -- text environments of markup languages.
-      ["@text.environment"] = { fg = colors.ss3 },
+      ["@markup.environment"] = { fg = colors.ss3 },
       -- text/string indicating the type of text environment. like the name of a `\begin` block in latex.
-      ["@text.environment.name"] = { fg = colors.ss3 },
+      ["@markup.environment.name"] = { fg = colors.ss3 },
+      -- Checked todo notes.
+      ["@markup.list.checked"] = { fg = colors.green },
+      -- Unchecked todo notes.
+      ["@markup.list.unchecked"] = { fg = colors.dark_blue },
       -- text representation of an informational note.
-      ["@note"] = { fg = colors.aurora_green, style = "bold" },
+      ["@comment.note"] = { fg = colors.aurora_green, style = "bold" },
       -- text representation of a warning note.
-      ["@warning"] = { fg = colors.aurora_yellow, style = "bold" },
+      ["@comment.warning"] = { fg = colors.aurora_yellow, style = "bold" },
       -- text representation of a danger note.
-      ["@danger"] = { fg = colors.aurora_red, style = "bold" },
+      ["@comment.error"] = { fg = colors.aurora_red, style = "bold" },
       -- type (and class) definitions and annotations.
       ["@type"] = { fg = colors.frozen_polar_water },
       -- built-in types: `i32` in rust.
@@ -433,6 +437,20 @@ function theme.highlights(colors, config)
       ["@variable"] = { fg = colors.ss0, style = config.styles.variables },
       -- variable names defined by the language: `this` or `self` in javascript.
       ["@variable.builtin"] = { fg = colors.ss0, style = config.styles.variables },
+
+      -- Specific to Markdown: different levels of headings
+      ["@markup.heading.1.markdown"] = { link = "markdownH1" },
+      ["@markup.heading.2.markdown"] = { link = "markdownH2" },
+      ["@markup.heading.3.markdown"] = { link = "markdownH3" },
+      ["@markup.heading.4.markdown"] = { link = "markdownH4" },
+      ["@markup.heading.5.markdown"] = { link = "markdownH5" },
+      ["@markup.heading.6.markdown"] = { link = "markdownH6" },
+      ["@markup.heading.1.marker.markdown"] = { link = "markdownH1Delimiter" },
+      ["@markup.heading.2.marker.markdown"] = { link = "markdownH2Delimiter" },
+      ["@markup.heading.3.marker.markdown"] = { link = "markdownH3Delimiter" },
+      ["@markup.heading.4.marker.markdown"] = { link = "markdownH4Delimiter" },
+      ["@markup.heading.5.marker.markdown"] = { link = "markdownH5Delimiter" },
+      ["@markup.heading.6.marker.markdown"] = { link = "markdownH6Delimiter" },
     }
 
     return treesitter
